@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>pwa</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+
+<body>
+    <div id="app">
+        <ul class="layui-nav layui-bg-green">
+            <li class="layui-nav-item layui-this">
+                <a>Home</a>
+            </li>
+
+            <li class="layui-nav-item">
+                <a>Note Book<span class="layui-badge">9</span></a>
+            </li>
+            <li class="layui-nav-item">
+                <a>github<span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item ">
+                <a><img src='img/my.jpeg' class="layui-nav-img">About me</a>
+            </li>
+        </ul>
+    </div>
+    <div class="ContentDiv">
+        <div class="layui-anim layui-anim-up aboutTitle ">
+            <span class='btitle'>WORK&nbsp;</span>
+            <img class="layui-anim layui-anim-rotate" src='img/my.jpeg' />
+            <span class='btitle'>&nbsp;LIFE</span>
+        </div>
+        <div class="rightword">
+            <p>To see a world in a grain of sand,</p>
+            <p>And a heaven in a wild flower, </p>
+            <p>Hold infinity in the palm of your hand, </p>
+            <p>And eternity in an hour. </p>
+        </div>
+    </div>
+    <div id="datouwang" class="container"></div>
+</body>
+<!--<script src='servierWork.js'></script>-->
+<script src='js/jquery.min.js'></script>
+<script src="js/zzsc.js"></script>
+<script src="./layui/layui.js"></script>
+<script src='servierWork.js'></script>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function() {
+        var element = layui.element;
+    });
+
+</script>
+
+</html>
