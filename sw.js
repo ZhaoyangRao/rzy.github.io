@@ -3,7 +3,6 @@ let cacheName = 'pwa-demo-assets'; // 缓存名字
 let imgCacheName = 'pwa-img';
 let filesToCache;
 filesToCache = [ // 所需缓存的文件
-    '/rzy.github.io',
     'layui/css/layui.css',
     'layui/layui.js',
     'js/jquery.min.js',
