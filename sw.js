@@ -4,12 +4,14 @@ let imgCacheName = 'pwa-img';
 let filesToCache;
 filesToCache = [ // 所需缓存的文件
     '/',
-    'layui',
-    'js',
-    'css',
-    'img',
-    'font',
-    'view'
+    'layui/css/layui.css',
+    'layui/layui.js',
+    'js/jquery.min.js',
+    'js/zzsc.js',
+    'servierWork.js',
+    'css/main.css',
+    'img/my.jpeg',
+    'font/my.ttf',
 ];
 
 self.addEventListener('install', function (e) {
@@ -23,7 +25,6 @@ self.addEventListener('install', function (e) {
 
 
 self.addEventListener('fetch', (e) => {
-    console.log(e)
     // 判断地址是不是需要实时去请求，是就继续发送请求
     if (e.request.url.indexOf('/api/400/200') > -1) {
         e.respondWith(
@@ -35,11 +36,11 @@ self.addEventListener('fetch', (e) => {
             })
         );
     } else {
+        console.log(caches)
         e.respondWith(
             // 匹配到缓存资源，就从缓存中返回数据
             caches.match(e.request).then(function (response) {
-                // return response || fetch(e.request);
-                return response
+                return response || fetch(e.request);
             })
         );
     }
