@@ -38,7 +38,8 @@ self.addEventListener('fetch', (e) => {
         e.respondWith(
             // 匹配到缓存资源，就从缓存中返回数据
             caches.match(e.request).then(function (response) {
-                return response || fetch(e.request);
+                // return response || fetch(e.request);
+                return response
             })
         );
     }
