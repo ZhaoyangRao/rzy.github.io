@@ -5,6 +5,6 @@
 
 ### 添加主屏图标 =>manifest 技术
 
-### 离线通知 =>ServiceWorker Push API 
+### 离线通知 => Push API 
 
 http-server 启动的本地服务，这里只是简单的写了一些离线缓存
