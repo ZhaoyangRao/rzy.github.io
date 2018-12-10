@@ -23,6 +23,7 @@ self.addEventListener('install', function (e) {
 
 
 self.addEventListener('fetch', (e) => {
+    console.log(e)
     // 判断地址是不是需要实时去请求，是就继续发送请求
     if (e.request.url.indexOf('/api/400/200') > -1) {
         e.respondWith(
