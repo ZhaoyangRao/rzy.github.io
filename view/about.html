@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My App</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/aboutme.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/icon.ico" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="layui-row">
+            <div class="layui-col-md3">
+                <img src='../img/my.jpeg' />
+                <p>I'm a web designer and developer looking for cutting-edge technology and user-friendly experiences</p>
+                <div class="router">
+                    <br /><a href="../index.html">home</a>
+                    <br /><a>github</a>
+                    <br /><a>note book</a>
+                    <br /><a style="color: white;">about <i class="layui-icon layui-icon-release" style="font-size: 40px;"></i> </a>
+                </div>
+            </div>
+            <div class="layui-col-md9">
+                <div class="layui-carousel" id='test1'>
+                    <div carousel-item>
+                        <div class="carousel_one">
+                            <div class="carousel_one_content">
+                                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+                                    <legend>Work Timeline</legend>
+                                </fieldset>
+                                <ul class="layui-timeline">
+                                    <li class="layui-timeline-item">
+                                        <i class="layui-icon layui-timeline-axis"></i>
+                                        <div class="layui-timeline-content layui-text">
+                                            <h3 class="layui-timeline-title">2012-2016</h3>
+                                            <p>
+                                                电子科技大学本科毕业。
+                                            </p>
+                                            <br>大四进入纵览科技实习，出于兴趣，正式开始web开发，一入前端深似海
+                                            <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
+                                        </div>
+                                    </li>
+                                    <li class="layui-timeline-item">
+                                        <i class="layui-icon layui-timeline-axis"></i>
+                                        <div class="layui-timeline-content layui-text">
+                                            <h3 class="layui-timeline-title">2017</h3>
+                                            <p>荣千古科技</p>
+                                            <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔
+                                        </div>
+                                    </li>
+                                    <li class="layui-timeline-item">
+                                        <i class="layui-icon layui-timeline-axis"></i>
+                                        <div class="layui-timeline-content layui-text">
+                                            <h3 class="layui-timeline-title">2017</h3>
+                                            <p>亚欧蓉控股</p>
+                                            <br>优联商铁成都，无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔
+                                        </div>
+                                    </li>
+                                    <li class="layui-timeline-item">
+                                        <i class="layui-icon layui-timeline-axis"></i>
+                                        <div class="layui-timeline-content layui-text">
+                                            <div class="layui-timeline-title">至今
+                                                <br>亚信科技
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="carousel_two">
+                            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 60px;">
+                                <legend>Life Timeline</legend>
+                            </fieldset>
+                            <div>
+                                <p style='font-size: 14px;line-height: 30px;'>
+                                    从明天起，做一个幸福的人<br>
+                                    喂马，劈柴，周游世界<br>
+                                    从明天起，关心粮食和蔬菜<br>
+                                    我有一所房子，面朝大海，春暖花开<br>
+                                    从明天起，和每一个亲人通信<br>
+                                    告诉他们我的幸福<br>
+                                    那幸福的闪电告诉我的<br>
+                                    我将告诉每一个人<br>
+                                    给每一条河每一座山取一个温暖的名字<br>
+                                    陌生人，我也为你祝福<br>
+                                    愿你有一个灿烂的前程<br>
+                                    愿你有情人终成眷属<br>
+                                    愿你在尘世获得幸福<br>
+                                    我只愿面朝大海，春暖花开</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src='../js/jquery.min.js'></script>
+<script src="../layui/layui.js"></script>
+<script src='../js/snow.js'></script>
+<script src='../servierWork.js'></script>
+<script>
+    layui.use(['carousel', 'element'], function() {
+        var element = layui.element;
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#test1',
+            width: '100%', //设置容器宽度
+            height: '100%',
+            arrow: 'hover',
+            anim: 'updown',
+            autoplay: false,
+            //            indicator: 'none'
+        });
+    });
+
+</script>
+
+</html>
