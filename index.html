@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-
-    <title>pwa</title>
+    <title>My App</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon.ico" />
 </head>
 
 <body>
@@ -20,10 +20,10 @@
                 <a>Note Book<span class="layui-badge">9</span></a>
             </li>
             <li class="layui-nav-item">
-                <a>github<span class="layui-badge-dot"></span></a>
+                <a href="https://github.com/ZhaoyangRao/rzy.github.io">github<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item ">
-                <a><img src='img/my.jpeg' class="layui-nav-img">About me</a>
+                <a href="view/about.html"><img src='img/my.jpeg' class="layui-nav-img">About me</a>
             </li>
         </ul>
     </div>
@@ -51,8 +51,10 @@
     //注意：导航 依赖 element 模块，否则无法进行功能性操作
     layui.use('element', function() {
         var element = layui.element;
+
     });
 
 </script>
 
 </html>
+
