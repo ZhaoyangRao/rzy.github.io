@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('../font/my.ttf') format("woff");
+}
+
+body {
+    background-color: #f6e8e5
+}
+
+.layui-bg-green {
+    background-color: #f6e8e5 !important;
+}
+
+.headerDiv {
+    display: none;
+}
+
+.layui-row {
+    height: 100vh
+}
+
+.layui-col-md3 {
+    border-right: 1px solid #c2c2c2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layui-col-md9 {
+    height: 100vh;
+}
+
+.layui-carousel {
+    height: 100%;
+}
+
+.layui-col-md3 img {
+    width: 160px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.layui-col-md3 p {
+    font-family: myFont;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.router a {
+    font-family: myFont;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.router a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.carousel_one {
+    background-color: #f6e8e5 !important;
+    width: 100%;
+}
+
+.carousel_one_content {
+    margin-top: 80px;
+}
+
+.carousel_one_content .layui-timeline {
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+.carousel_two {
+    background-color: #f6e8e5 !important;
+    /*    color: white;*/
+    text-align: center;
+}
