@@ -8,9 +8,13 @@ filesToCache = [ // 所需缓存的文件
     'layui/layui.js',
     'js/jquery.min.js',
     'js/zzsc.js',
+    'js/snow.js',
     'servierWork.js',
     'css/main.css',
+    'css/aboutme.css',
     'img/my.jpeg',
+    'img/icon.ico',
+    'img/snow.png',
     'font/my.ttf',
 ];
 
