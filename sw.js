@@ -4,6 +4,7 @@ let imgCacheName = 'pwa-img';
 let filesToCache;
 filesToCache = [ // 所需缓存的文件
     'https://zhaoyangrao.github.io/rzy.github.io/',
+    'https://zhaoyangrao.github.io/rzy.github.io/view/about.html',
     'layui/css/layui.css',
     'layui/layui.js',
     'js/jquery.min.js',
