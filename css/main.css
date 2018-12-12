@@ -1,0 +1,68 @@
+  @font-face {
+      font-family: myFont;
+      src: url('../font/my.ttf');
+
+      /* IE9+ eot*/
+  }
+
+  .container {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFFF;
+  }
+
+  body {
+      position: relative;
+      overflow: hidden;
+  }
+
+  .ContentDiv {
+      position: absolute;
+      z-index: 22;
+      width: 600px;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .aboutTitle img {
+      display: inline-block;
+      width: 100px;
+      border-radius: 50%;
+  }
+
+  .aboutTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: myFont;
+      font-weight: 600;
+  }
+
+  .btitle {
+      font-size: 60px;
+      color: white;
+  }
+
+  .rightword {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 30px;
+      line-height: 30px;
+      color: white;
+      font-family: myFont
+  }
+
+  .audioDiv {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 9;
+  }
+
+  .iconvoice:hover {
+      cursor: pointer;
+      color: white !important;
+  }
