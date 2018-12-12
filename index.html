@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <audio src="../static/summer.mp3" autoplay loop>
+    </audio>
+    <div class='audioDiv'>
+        <i class="iconvoice layui-icon layui-icon-speaker" style="font-size: 30px; color: #c2c2c2;"></i>
+        <i class="layui-icon layui-icon-snowflake layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 30px; color: #c2c2c2;"></i>
+    </div>
     <div id="app">
         <ul class="layui-nav layui-bg-green">
             <li class="layui-nav-item layui-this">
@@ -17,13 +23,13 @@
             </li>
 
             <li class="layui-nav-item">
-                <a>Note Book<span class="layui-badge">9</span></a>
+                <a class="notebook">Note Book<span class="layui-badge">9</span></a>
             </li>
             <li class="layui-nav-item">
                 <a href="https://github.com/ZhaoyangRao/rzy.github.io">github<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item ">
-                <a href="./view/about.html"><img src='img/my.jpeg' class="layui-nav-img">About me</a>
+                <a href="view/about.html"><img src='img/my.jpeg' class="layui-nav-img">About me</a>
             </li>
         </ul>
     </div>
@@ -49,9 +55,19 @@
 <script src='servierWork.js'></script>
 <script>
     //注意：导航 依赖 element 模块，否则无法进行功能性操作
-    layui.use('element', function() {
+    layui.use(['element', 'layer'], function() {
         var element = layui.element;
-
+        var layer = layui.layer;
+        $(".iconvoice").click(function() {
+            layer.tips('这么好听你居然想关!  NO WAY', '.iconvoice', {
+                time: 4000,
+            });
+        })
+        $(".notebook").click(function() {
+            layer.tips('小主本人很懒,从小到大不写日记', '.notebook', {
+                time: 1000,
+            });
+        })
     });
 
 </script>
