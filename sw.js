@@ -4,8 +4,6 @@ let imgCacheName = 'pwa-img';
 let filesToCache;
 filesToCache = [ // 所需缓存的文件
     'https://zhaoyangrao.github.io/rzy.github.io/',
-     'https://zhaoyangrao.github.io/rzy.github.io/index.html',
-    'https://zhaoyangrao.github.io/rzy.github.io/view/about.html',
     'layui/css/layui.css',
     'layui/layui.js',
     'js/jquery.min.js',
@@ -17,7 +15,10 @@ filesToCache = [ // 所需缓存的文件
     'img/my.jpeg',
     'img/icon.ico',
     'img/snow.png',
+    'img/jcl.gif',
     'font/my.ttf',
+    'font/mw.ttf',
+    'static/summer.mp3'
 ];
 
 self.addEventListener('install', function (e) {
@@ -42,6 +43,7 @@ self.addEventListener('fetch', (e) => {
             })
         );
     } else {
+        console.log(caches)
         e.respondWith(
             // 匹配到缓存资源，就从缓存中返回数据
             caches.match(e.request).then(function (response) {
