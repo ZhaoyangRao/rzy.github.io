@@ -1,7 +1,12 @@
 @font-face {
-    font-family: 'myFont';
-    src: url('../font/my.ttf') format("woff");
+    font-family: miaowu;
+    src: url('../font/mw.ttf');
+
 }
+
+
+
+
 
 body {
     background-color: #f6e8e5
@@ -43,14 +48,14 @@ body {
 }
 
 .layui-col-md3 p {
-    font-family: myFont;
+    font-family: miaowu;
     font-size: 20px;
     margin-top: 20px;
     text-align: center;
 }
 
 .router a {
-    font-family: myFont;
+    font-family: miaowu;
     font-size: 30px;
     font-weight: 600;
     line-height: 60px;
@@ -76,7 +81,22 @@ body {
 }
 
 .carousel_two {
-    background-color: #f6e8e5 !important;
-    /*    color: white;*/
     text-align: center;
+    /*    background: rgba(220, 38, 38, 0.2);*/
+    /*    opacity: 0.4;*/
+    background: url(../img/jcl.gif) no-repeat;
+    background-size: cover;
+}
+
+.textDiv {
+
+    color: white;
+    font-size: 24px;
+    line-height: 40px;
+    text-shadow: 1PX 1PX 1PX #FFFFFF;
+    font-family: miaowu
+}
+
+.textDiv p {
+    /*    background-color: red*/
 }
