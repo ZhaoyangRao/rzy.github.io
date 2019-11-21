@@ -49,7 +49,7 @@
         }
 
         snowImage = new Image();
-        snowImage.src = '../img/snow.png';
+        snowImage.src = './img/snow.png';
 
         loop();
     }
