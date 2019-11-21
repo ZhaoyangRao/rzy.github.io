@@ -20,7 +20,8 @@ filesToCache = [ // 所需缓存的文件
     'font/mw.ttf',
     'element.js',
     'element.css',
-    'vue.js'
+    'vue.js',
+    'css/aboutme.css'
 ];
 
 self.addEventListener('install', function (e) {
