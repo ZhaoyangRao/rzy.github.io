@@ -4,21 +4,16 @@ let imgCacheName = 'pwa-img';
 let filesToCache;
 filesToCache = [ // 所需缓存的文件
     'https://zhaoyangrao.github.io/rzy.github.io/',
-    'layui/css/layui.css',
-    'layui/layui.js',
     'js/jquery.min.js',
     'js/zzsc.js',
     'js/snow.js',
     'servierWork.js',
-    'css/main.css',
-    'css/aboutme.css',
     'img/my.jpeg',
     'img/icon.ico',
     'img/snow.png',
     'img/jcl.gif',
     'font/my.ttf',
     'font/mw.ttf',
-    'static/summer.mp3'
 ];
 
 self.addEventListener('install', function (e) {

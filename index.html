@@ -4,73 +4,192 @@
 <head>
     <meta charset="utf-8">
     <title>My App</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="./layui/css/layui.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./img/icon.ico" />
+    <link rel="stylesheet" href="../css/aboutme.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/icon.ico" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 
 <body>
-    <audio src="./static/summer.mp3" autoplay loop>
-    </audio>
-    <div class='audioDiv'>
-        <i class="iconvoice layui-icon layui-icon-speaker" style="font-size: 30px; color: #c2c2c2;"></i>
-        <i class="layui-icon layui-icon-snowflake layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 30px; color: #c2c2c2;"></i>
-    </div>
-    <div id="app">
-        <ul class="layui-nav layui-bg-green">
-            <li class="layui-nav-item layui-this">
-                <a>Home</a>
-            </li>
+    <div class="container" id='app'>
+        <el-row>
+            <el-col :span="6">
+                <div class="layui-col-md3">
+                    <img src='../img/my.jpeg' />
+                    <p>I'm a web designer and developer looking for cutting-edge technology and user-friendly experiences</p>
+                    <div class="router">
+                        <a href="https://zhaoyangrao.github.io/blog.github.io/#/" target="_blank">link blog</a>
+                    </div>
 
-            <li class="layui-nav-item">
-                <a class="notebook">Note Book<span class="layui-badge">9</span></a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="https://github.com/ZhaoyangRao/rzy.github.io">github<span class="layui-badge-dot"></span></a>
-            </li>
-            <li class="layui-nav-item ">
-                <a href="view/about.html"><img src='img/my.jpeg' class="layui-nav-img">About me</a>
-            </li>
-        </ul>
+                </div>
+            </el-col>
+            <el-col :span="18">
+                <div class="layui-col-md9">
+                    <el-carousel direction="vertical" :autoplay="false" class='carousel'>
+                        <div class="layui-carousel">
+                            <el-carousel-item>
+                                <div class="carousel_two">
+                                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;color:white;font-family: miaowu">
+                                        <legend>Life Timeline</legend>
+                                    </fieldset>
+                                    <div class="textDiv">
+                                        <p>
+                                            从明天起，做一个幸福的人<br>
+                                            喂马，劈柴，周游世界<br>从明天起，关心粮食和蔬菜<br>
+                                            我有一所房子，面朝大海，春暖花开<br>
+                                            从明天起，和每一个亲人通信<br>
+                                            告诉他们我的幸福<br>
+                                            那幸福的闪电告诉我的<br>
+                                            我将告诉每一个人<br>
+                                            给每一条河每一座山取一个温暖的名字<br>
+                                            陌生人，我也为你祝福<br>
+                                            愿你有一个灿烂的前程<br>
+                                            愿你有情人终成眷属<br>
+                                            愿你在尘世获得幸福<br>
+                                            我只愿面朝大海，春暖花开</p>
+                                    </div>
+                                </div>
+                            </el-carousel-item>
+                            <el-carousel-item>
+                                <div class="carousel_one">
+                                    <div class="carousel_one_content">
+                                        <span style='padding-left: 20px;'>Work Timeline</span>
+                                        <el-divider></el-divider>
+
+                                        <el-timeline>
+                                            <el-timeline-item timestamp="2012-2016" placement="top">
+                                                <el-card>
+                                                    <h4> 电子科技大学本科毕业。</h4>
+                                                    <p> <br>大四进入纵览科技实习，出于兴趣，正式开始web开发，一入前端深似海
+                                                        <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔</p>
+                                                </el-card>
+                                            </el-timeline-item>
+                                            <el-timeline-item timestamp="2017" placement="top">
+                                                <el-card>
+                                                    <h4>荣千古科技</h4>
+                                                    <p><br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔</p>
+                                                </el-card>
+                                            </el-timeline-item>
+                                            <el-timeline-item timestamp="2017-12至2018-8" placement="top">
+                                                <el-card>
+                                                    <h4>亚欧蓉控股</h4>
+                                                    <p>优联商铁成都，无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔</p>
+                                                </el-card>
+                                            </el-timeline-item>
+                                            <el-timeline-item timestamp="2018-8至今" placement="top">
+                                                <el-card>
+                                                    <h4>亚信科技</h4>
+                                                </el-card>
+                                            </el-timeline-item>
+                                        </el-timeline>
+                                    </div>
+                                </div>
+                            </el-carousel-item>
+
+                            <el-carousel-item>
+                                <div class="carousel_three">
+                                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;color:white;font-family: miaowu">
+                                        <legend>Part of the project</legend>
+                                    </fieldset>
+                                    <div class="project">
+                                        <div class="project_item">
+                                            <div class="project_item_dialog" v-for='(item,index) in setObject' :key='index' @click='dialogshow(item)'>
+                                                <p>{{item.title}}</p>
+                                                <img :src='item.img' />
+                                            </div>
+                                        </div>
+                                        <div class="project_item">
+                                            <div class="project_item_dialog" v-for='(item,index) in setObject' :key='index' @click='dialogshow(item)'>
+                                                <p>{{item.title}}</p>
+                                                <img :src='item.img' />
+                                            </div>
+                                        </div>
+                                        <div class="project_item">
+                                            <div class="project_item_dialog" v-for='(item,index) in setObject' :key='index' @click='dialogshow(item)'>
+                                                <p>{{item.title}}</p>
+                                                <img :src='item.img' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </el-carousel-item>
+                        </div>
+                    </el-carousel>
+
+                </div>
+            </el-col>
+        </el-row>
+        <el-dialog :title="title" :visible.sync="centerDialogVisible" width="60%" center>
+            <el-carousel class='dialogimg'>
+                <el-carousel-item v-for="item in imglist" :key="item">
+                    <img :src='item' />
+                </el-carousel-item>
+            </el-carousel>
+            <span slot="footer" class="dialog-footer">
+            </span>
+        </el-dialog>
+        <el-dialog :title="title" :visible.sync="centerDialogVisibleapp" width="60%" center>
+            <el-carousel class='dialogimg dialogimgapp'>
+                <el-carousel-item v-for="item in imglist" :key="item">
+                    <img :src='item' />
+                </el-carousel-item>
+            </el-carousel>
+            <span slot="footer" class="dialog-footer">
+            </span>
+        </el-dialog>
     </div>
-    <div class="ContentDiv">
-        <div class="layui-anim layui-anim-up aboutTitle ">
-            <span class='btitle'>WORK&nbsp;</span>
-            <img class="layui-anim layui-anim-rotate" src='img/my.jpeg' />
-            <span class='btitle'>&nbsp;LIFE</span>
-        </div>
-        <div class="rightword">
-            <p>To see a world in a grain of sand,</p>
-            <p>And a heaven in a wild flower, </p>
-            <p>Hold infinity in the palm of your hand, </p>
-            <p>And eternity in an hour. </p>
-        </div>
-    </div>
-    <div id="datouwang" class="container"></div>
 </body>
-<!--<script src='servierWork.js'></script>-->
-<script src='js/jquery.min.js'></script>
-<script src="js/zzsc.js"></script>
-<script src="./layui/layui.js"></script>
-<script src='servierWork.js?version=1'></script>
+<script src='../js/jquery.min.js'></script>
+<script src='../js/snow.js'></script>
+<script src='../servierWork.js?version=1'></script>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
 <script>
-    //注意：导航 依赖 element 模块，否则无法进行功能性操作
-    layui.use(['element', 'layer'], function() {
-        var element = layui.element;
-        var layer = layui.layer;
-        $(".iconvoice").click(function() {
-            layer.tips('这么好听你居然想关!  NO WAY', '.iconvoice', {
-                time: 4000,
-            });
-        })
-        $(".notebook").click(function() {
-            layer.tips('小主本人很懒,从小到大不写日记', '.notebook', {
-                time: 1000,
-            });
-        })
-    });
+    new Vue({
+        el: '#app',
+        data: {
+            centerDialogVisible: false,
+            centerDialogVisibleapp: false,
+            setObject: [{
+                    title: '山东移动精准招商大屏',
+                    img: '../img/sd4.png',
+                    imglist: ['../img/sd1.png', '../img/sd2.png', '../img/sd3.png', '../img/sd4.png']
+                }, {
+                    title: '辽宁移动共享应用平台',
+                    img: '../img/sd4.png',
+                    imglist: ['../img/sd1.png', '../img/sd2.png', '../img/sd3.png', '../img/sd4.png']
+                }, {
+                    title: '山东大屏',
+                    img: '../img/sd4.png',
+                    imglist: ['../img/sd1.png', '../img/sd2.png', '../img/sd3.png', '../img/sd4.png']
+                },
+                //                {
+                // title: '携号转网app',
+                // img: '../img/xiehao01.png',
+                // imglist: ['../img/xiehao01.png', '../img/xiehao02.jpg', '../img/xiehao03.png'],
+                // type: 'app'
+                // }
 
-</script>
+            ],
+            title: '',
+            imglist: []
+        },
+        methods: {
+            dialogshow: function(item) {
+                if (item.type != 'app') {
+                    this.centerDialogVisible = true;
+                    this.title = item.title;
+                    this.imglist = item.imglist
+                } else {
+                    this.centerDialogVisibleapp = true;
+                    this.title = item.title;
+                    this.imglist = item.imglist
+                }
 
-</html>
-
+            }
+        }
+    })
+</script></html>
